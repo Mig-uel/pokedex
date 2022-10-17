@@ -4,7 +4,16 @@ export const Container = styled.div`
   height: 100vh;
   width: 100%;
 
-  background: ${(props) => props.background};
+  background: ${(props) => {
+    if (props.background === 'white') return '#ECF0F1'
+    else if (props.background === 'gray') return '#95A5A6'
+    else if (props.background === 'blue') return '#3498DB'
+    else if (props.background === 'green') return '#27AE60'
+    else if (props.background === 'red') return '#C0392B'
+    else if (props.background === 'purple') return '#8E44AD'
+    else if (props.background === 'yellow') return '#F1C40F'
+    else return props.background
+  }};
   position: relative;
 
   display: flex;
@@ -13,6 +22,9 @@ export const Container = styled.div`
   justify-content: center;
 
   gap: 10px;
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 `
 
 export const RandomPokemonContainer = styled.div`
@@ -37,7 +49,16 @@ export const ViewMoreButton = styled.div`
   position: absolute;
   bottom: 30px;
 
-  color: ${(props) => props.background};
+  color: ${(props) => {
+    if (props.background === 'white') return '#ECF0F1'
+    else if (props.background === 'gray') return '#95A5A6'
+    else if (props.background === 'blue') return '#3498DB'
+    else if (props.background === 'green') return '#27AE60'
+    else if (props.background === 'red') return '#C0392B'
+    else if (props.background === 'purple') return '#8E44AD'
+    else if (props.background === 'yellow') return '#F1C40F'
+    else return props.background
+  }};
 
   text-align: center;
 
