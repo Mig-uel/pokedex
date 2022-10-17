@@ -7,7 +7,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
 
-  padding-top: 15px;
+  padding: 15px 0;
+  position: absolute;
+  z-index: 1;
 `
 
 export const ImageContainer = styled.div`
