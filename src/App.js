@@ -12,6 +12,7 @@ const App = () => {
 
       <Layout>
         <RandomPokemon />
+        <section></section>
       </Layout>
     </>
   )
