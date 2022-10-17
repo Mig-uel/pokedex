@@ -12,5 +12,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   section {
     height: 10000px;
+    margin-top: 100px;
+
+    text-align: center;
   }
 `
