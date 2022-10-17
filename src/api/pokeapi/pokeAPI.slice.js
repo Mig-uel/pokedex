@@ -15,9 +15,13 @@ export const pokeAPI = createApi({
         if (req.error) return { error: req.error }
 
         const randomId = Math.floor(Math.random() * req.data.count)
-        const res = await fetchWithBQ(`pokemon-species/${randomId}`)
 
-        return res.data ? { data: res.data } : { error: res.error }
+        const res = await fetchWithBQ(`pokemon/${randomId}`)
+        const pokemonColor = await fetchWithBQ(`pokemon-species/${randomId}`)
+
+        return res.data && pokemonColor.data
+          ? { data: { ...res.data, ...pokemonColor.data } }
+          : { error: res.error }
       },
     }),
   }),
