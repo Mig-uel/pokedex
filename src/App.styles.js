@@ -10,4 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Luckiest Guy', sans-serif;
   }
+  section {
+    height: 10000px;
+  }
 `
