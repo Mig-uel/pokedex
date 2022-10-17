@@ -19,6 +19,10 @@ export const pokeAPI = createApi({
         const res = await fetchWithBQ(`pokemon/${randomId}`)
         const pokemonColor = await fetchWithBQ(`pokemon-species/${randomId}`)
 
+        document
+          .querySelector("meta[name='theme-color']")
+          .setAttribute('content', `${pokemonColor?.data.color.name}`)
+
         return res.data && pokemonColor.data
           ? { data: { ...res.data, ...pokemonColor.data } }
           : { error: res.error }
