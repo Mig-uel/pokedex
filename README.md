@@ -33,3 +33,7 @@ A React-based Pokedex application.
 
 - [Pamela Bonan](https://dribbble.com/shots/19201805-Daily-UI-2-Tribo-Criativa-Pok-mon)
 - [Koobs](https://dribbble.com/shots/15306580-Pokedex)
+
+#### Pokeball Loader
+
+- [Vincenzo Bianco](https://codepen.io/vinztt/pen/XjEyvZ)
