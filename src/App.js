@@ -1,5 +1,5 @@
 import {
-  useGetPokemonQuery,
+  useGetPokemonsQuery,
   useGetRandomPokemonQuery,
 } from './api/pokeapi/pokeAPI.slice'
 
@@ -10,12 +10,11 @@ import RandomPokemon from './components/random-pokemon/random-pokemon.component'
 /* ---- Styles ---- */
 import { GlobalStyle } from './App.styles'
 import Loader from './components/loader/loader.component'
+import Pokemons from './components/pokemons/pokemons.component'
 
 const App = () => {
-  const { isLoading: isAllPokemonLoading } = useGetPokemonQuery()
+  const { isLoading: isAllPokemonLoading } = useGetPokemonsQuery()
   const { isLoading: isRandomPokemonLoading } = useGetRandomPokemonQuery()
-  console.log('Pokemons', isAllPokemonLoading)
-  console.log('Random Pokemon', isRandomPokemonLoading)
 
   return (
     <>
@@ -26,9 +25,7 @@ const App = () => {
       ) : (
         <Layout>
           <RandomPokemon />
-          <section>
-            <h1>Work in progress.</h1>
-          </section>
+          <Pokemons />
         </Layout>
       )}
     </>
