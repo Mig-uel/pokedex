@@ -21,7 +21,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  gap: 10px;
+  /* gap: 10px; */
 
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
@@ -29,6 +29,12 @@ export const Container = styled.div`
 
 export const RandomPokemonContainer = styled.div`
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
 `
 
 export const SpriteContainer = styled.img`
