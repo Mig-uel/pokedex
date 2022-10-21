@@ -18,8 +18,6 @@ const RandomPokemon = () => {
 
   const colors = {}
 
-  console.log('Random Pokemon', randomPokemonData)
-
   if (
     randomPokemonData?.color.name === 'black' ||
     randomPokemonData?.color.name === 'blue'
@@ -31,7 +29,9 @@ const RandomPokemon = () => {
     <Container background={randomPokemonData?.color.name}>
       <RandomPokemonContainer>
         <SpriteContainer
-          src={randomPokemonData.sprites.front_default}
+          src={
+            randomPokemonData.sprites.other['official-artwork'].front_default
+          }
           alt={randomPokemonData.name}
         />
         <NameContainer background={randomPokemonData.color.name}>
