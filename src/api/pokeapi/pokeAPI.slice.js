@@ -41,7 +41,7 @@ export const pokeAPI = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: 'https://pokeapi.co/api/v2/' }),
 
   endpoints: (builder) => ({
-    getPokemon: builder.query({
+    getPokemons: builder.query({
       query: () => 'pokemon-species',
     }),
 
@@ -63,7 +63,15 @@ export const pokeAPI = createApi({
           : { error: res.error }
       },
     }),
+
+    getPokemon: builder.query({
+      query: (url) => `pokemon/${url}`,
+    }),
   }),
 })
 
-export const { useGetPokemonQuery, useGetRandomPokemonQuery } = pokeAPI
+export const {
+  useGetPokemonsQuery,
+  useGetRandomPokemonQuery,
+  useGetPokemonQuery,
+} = pokeAPI
